@@ -1,0 +1,32 @@
+.about {
+  padding: 80px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.skill-box {
+  border: 2px solid #646cff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #646cff;
+  transition: 0.3s;
+}
+
+.skill-box:hover {
+  background: #646cff;
+  color: white;
+}
