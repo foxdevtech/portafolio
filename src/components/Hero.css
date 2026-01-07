@@ -32,6 +32,40 @@
   background-color: #535bf2;
 }
 
+.gradient-text {
+  /* Definimos los colores del degradado */
+  background: linear-gradient(
+    45deg,
+    #646cff,
+    #ff64f2,
+    #64f2ff,
+    #646cff
+  );
+  background-size: 300% 300%; /* Hacemos el fondo más grande para poder moverlo */
+  
+  /* Hacemos que el fondo brille solo a través del texto */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* El texto se vuelve transparente para ver el fondo */
+  
+  /* Añadimos la animación */
+  animation: moveGradient 6s ease infinite;
+  font-weight: 800;
+}
+
+/* Definimos el movimiento del degradado */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem; /* Reducimos el tamaño del título */

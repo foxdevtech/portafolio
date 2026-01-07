@@ -1,0 +1,41 @@
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 3rem 0;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #646cff; /* El color de tu marca */
+  transform: translateY(-5px); /* Pequeño salto hacia arriba */
+}
+
+.fa-github:hover { color: #333; }
+.fa-linkedin:hover { color: #0077b5; }
+.fa-x-twitter:hover { color: #000; }
+.fa-envelope:hover { color: #ea4335; }
+
+@media (max-width: 768px) {
+  .social-links {
+    gap: 1.5rem;
+  }
+}

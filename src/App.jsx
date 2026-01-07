@@ -1,5 +1,6 @@
 import About from './components/About';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import ProjectCard from './components/ProjectCard';
@@ -57,6 +58,8 @@ function App() {
       <section id="contacto">
         <Contact />
       </section>
+
+      <Footer />
     </div>
   );
 }
