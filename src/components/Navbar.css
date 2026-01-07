@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 10%;
+  padding: 1rem 5%;
   background-color: rgba(255, 255, 255, 0.95); /* Fondo un poco transparente */
   backdrop-filter: blur(10px); /* Efecto de desenfoque moderno */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -76,19 +76,21 @@
   .navbar-links {
     position: fixed;
     top: 0;
-    right: -100%; /* Empieza fuera de la pantalla */
-    width: 70%;
+    right: -100%; 
+    width: 100%; /* Cambia el ancho al 100% para que cubra todo al abrir */
     height: 100vh;
     background-color: white;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 0.5s;
-    box-shadow: -10px 0 20px rgba(0,0,0,0.1);
+    transition: 0.4s ease-in-out;
+    z-index: 999;
+    visibility: hidden; /* Esto asegura que no sea "cliqueable" mientras está oculto */
   }
 
   .navbar-links.open {
-    right: 0; /* Se desliza hacia adentro cuando tiene la clase .open */
+    right: 0;
+    visibility: visible; /* Lo hacemos visible solo cuando se abre */
   }
 
   /* Animación de la hamburguesa para que se convierta en una "X" */
