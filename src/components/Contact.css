@@ -1,6 +1,6 @@
 .contact {
   padding: 80px 20px;
-  background-color: #f4f4f9;
+  background-color: transparent;
   text-align: center;
 }
 
@@ -42,4 +42,18 @@
   max-width: 500px;
   margin: 40px auto;
   border: 1px solid #c3e6cb;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--accent);
+}
+
+/* Para que el texto que escribes se vea bien */
+.contact-form input::placeholder, 
+.contact-form textarea::placeholder {
+  color: var(--text-primary);
+  opacity: 0.6;
 }

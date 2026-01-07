@@ -1,10 +1,12 @@
 .hero {
-  height: 80vh;
+  background-color: var(--bg-color); 
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #fff;
+  padding: 2rem;
+  transition: background-color 0.3s ease;
 }
 
 .highlight {
@@ -12,8 +14,16 @@
 }
 
 .hero h1 {
+  color: var(--text-primary); 
   font-size: 3rem;
   margin-bottom: 1rem;
+}
+
+.hero p {
+  color: var(--text-primary);
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto 2rem;
 }
 
 .btn-primary {
@@ -33,22 +43,11 @@
 }
 
 .gradient-text {
-  /* Definimos los colores del degradado */
-  background: linear-gradient(
-    45deg,
-    #646cff,
-    #ff64f2,
-    #64f2ff,
-    #646cff
-  );
-  background-size: 300% 300%; /* Hacemos el fondo más grande para poder moverlo */
-  
-  /* Hacemos que el fondo brille solo a través del texto */
+  background: linear-gradient(45deg, #646cff, #ff64f2, #64f2ff, #646cff);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent; /* El texto se vuelve transparente para ver el fondo */
-  
-  /* Añadimos la animación */
+  color: transparent;
   animation: moveGradient 6s ease infinite;
   font-weight: 800;
 }

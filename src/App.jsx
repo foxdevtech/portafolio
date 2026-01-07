@@ -4,8 +4,21 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import ProjectCard from './components/ProjectCard';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+  useEffect(() => {
+    // Aplicamos el atributo al body para que el CSS cambie
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+  
   const misProyectos = [
     {
       title: "E-commerce App",
@@ -14,9 +27,16 @@ function App() {
       link: "#"
     },
     {
-      title: "Weather Dashboard",
-      description: "Aplicación que consume una API de clima en tiempo real.",
-      techStack: ["JavaScript", "React", "API"],
+      title: "Delivery App",
+      description: "Aplicación fullstack para pequeños y grandes negocios para ofrecer servicio de delivery a los clientes con seguiminento gps real.",
+      techStack: ["JavaScript", "NodeJS", "Flutter", "API"],
+      link: "#"
+    },
+
+    {
+      title: "Citas Medicas",
+      description: "Aplicación que para consultorios medicos, donde los clientes pueden reserver citas con el meedico de su preferencia.",
+      techStack: ["JavaScript", "Laravel", "MySql", "API"],
       link: "#"
     }
   ];
@@ -24,7 +44,7 @@ function App() {
   return (
     <div>
 
-      <Navbar/>
+      <Navbar toggleTheme={toggleTheme} theme={theme} />
 
       <section id="hero">
         <Hero />

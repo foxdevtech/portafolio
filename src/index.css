@@ -19,3 +19,30 @@ body {
   color: #333;
   line-height: 1.6;
 }
+
+:root {
+  /* MODO CLARO - Usando tus colores */
+  --bg-color: #f4f4f9;              /* Gris Lavanda pálido */
+  --nav-bg: rgba(255, 255, 255, 0.95); /* El blanco traslúcido */
+  --card-bg: #ffffff;               /* Blanco puro para las tarjetas */
+  --text-primary: #2c3e50;          /* Gris oscuro para lectura */
+  --accent: #646cff;                /* Violeta Vite */
+  --success: #d4edda;               /* Verde menta */
+}
+
+[data-theme='dark'] {
+  /* MODO OSCURO - Colores elegantes */
+  --bg-color: #0f172a;              /* Azul medianoche profundo (mejor que negro puro) */
+  --nav-bg: rgba(15, 23, 42, 0.9);   /* Azul traslúcido */
+  --card-bg: #1e293b;               /* Azul grisáceo para que las tarjetas resalten */
+  --text-primary: #f1f5f9;          /* Blanco roto para no cansar la vista */
+  --accent: #818cf8;                /* Violeta más claro para que brille en oscuro */
+  --success: #1b2e1f;               /* Verde oscuro para alertas */
+}
+
+/* Aplicación global */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
