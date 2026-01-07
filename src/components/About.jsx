@@ -8,7 +8,7 @@ const About = () => {
       <div className="about-container">
         <h2>Sobre Mí</h2>
         <p>
-          Soy un desarrollador entusiasta con base en [Tu Ciudad]. 
+          Soy un desarrollador entusiasta con base en Aguascalientes, México. 
           Me encanta transformar problemas complejos en interfaces intuitivas.
         </p>
         

@@ -73,25 +73,28 @@
     z-index: 1001;
   }
 
+  @media (max-width: 768px) {
   .navbar-links {
     position: fixed;
     top: 0;
-    right: -100%; 
-    width: 100%; /* Cambia el ancho al 100% para que cubra todo al abrir */
+    right: -100%; /* Sigue fuera de la pantalla */
+    width: 100%;  /* Que ocupe todo el ancho al abrirse */
     height: 100vh;
     background-color: white;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 0.4s ease-in-out;
-    z-index: 999;
-    visibility: hidden; /* Esto asegura que no sea "cliqueable" mientras está oculto */
+    transition: 0.3s ease-in-out;
+    visibility: hidden; /* <--- Agrega esto: oculta el elemento del flujo */
+    z-index: 1000;
   }
 
   .navbar-links.open {
     right: 0;
-    visibility: visible; /* Lo hacemos visible solo cuando se abre */
+    visibility: visible; /* <--- Se vuelve visible al abrirse */
   }
+}
 
   /* Animación de la hamburguesa para que se convierta en una "X" */
   .nav-toggle.open span:nth-child(1) {
